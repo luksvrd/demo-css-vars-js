@@ -2,6 +2,9 @@
 const h1 = document.querySelector("h1");
 const h2 = document.querySelector(".art-title");
 
+//  TODO: Select the only input element
+const input = document.querySelector("input");
+
 // TODO: add click event listeners to all the buttons
 // const buttons = document.querySelectorAll("button");
 
@@ -46,6 +49,14 @@ function handleClick(event) {
   }
 }
 
-buttons.forEach(function (button) {
-  button.addEventListener("click", handleClick);
-});
+// Loop over buttons and add event listener to each individual button
+buttons.forEach(
+  //  callback function
+  function (button) {
+    button.addEventListener(
+      "click",
+      // Reference the function we created above - ue it for each button
+      handleClick
+    );
+  }
+);
