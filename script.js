@@ -5,6 +5,11 @@ const h2 = document.querySelector(".art-title");
 //  TODO: Select the only input element
 const input = document.querySelector("input");
 
+// TODO: add event listener to the input selector and updat recolor property of h1 element
+document.querySelector("input").addEventListener("input", function (event) {
+  h1.style.setProperty("--color", event.target.value);
+});
+
 // TODO: add click event listeners to all the buttons
 // const buttons = document.querySelectorAll("button");
 
