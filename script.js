@@ -29,12 +29,13 @@ const h2 = document.querySelector(".art-title");
 const buttons = document.querySelectorAll("button");
 
 function handleClick(event) {
+  // TODO: add logic to change the text of the h2 elements
+  // if we clicked 'increas'...
   // Use 'target' to get the specific button that was clicked
-  console.log(event.target.id);
+  if (event.taget.id === "increase") {
+    console.log("Increase the font size");
+  }
 }
-
-// TODO: add logic to change the text of hte h2 elements
-// if we clicked the 'increase' button...
 
 buttons.forEach(function (button) {
   button.addEventListener("click", handleClick);
