@@ -32,8 +32,17 @@ function handleClick(event) {
   // TODO: add logic to change the text of the h2 elements
   // if we clicked 'increas'...
   // Use 'target' to get the specific button that was clicked
-  if (event.taget.id === "increase") {
-    console.log("Increase the font size");
+  // saying get all the styles of the h2 and get the specific style of that element ie. the font size (+0.05)
+  const currentFontSize =
+    Number.parseFloat(getComputedStyle(h2).getPropertyValue("--font-size")) +
+    0.05;
+
+  // TODO: Add logic to change the text of the h2 elements
+  // If we clicked 'increase'...
+  if (event.target.id === "increase") {
+    h2.style.setProperty("--font-size", currentFontSize + 0.5 + "em");
+  } else {
+    h2.style.setProperty("--font-size", currentFontSize - 0.5 + "em");
   }
 }
 
