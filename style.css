@@ -11,6 +11,7 @@ body {
   line-height: 1.5;
 }
 
+/* [--color] is how you create a variable in css. Use case - a great way to manipulate css on the fly though the .js file */
 h1 {
   --color: #00a8e8;
 
@@ -41,6 +42,7 @@ section div:nth-child(2) {
 }
 
 /* #color-picker div */
+/* :nth child (2) means want the main then all sections then want a div inside a section but only when its the second child of the seciton, so line 2*/
 section div:nth-child(2) {
   display: flex;
   flex-direction: column;
